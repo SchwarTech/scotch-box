@@ -23,4 +23,7 @@ Vagrant.configure("2") do |config|
     # Provision to install PhpMyAdmin
     config.vm.provision :shell, :privileged => true,   :path => "bin/phpmyadmin.sh"
 
+    # Provision to update MongoDB binding
+    config.vm.provision :shell, :privileged => true,   :path => "bin/updatemongodb.sh"
+
 end
